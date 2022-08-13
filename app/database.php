@@ -2,7 +2,7 @@
 
 function CoraPlugin_get_series($title) {
   $post = get_post([
-    "post_title" => $title,
+    "title" => $title,
     "post_type" => SERIES_TYPE,
     "post_status" => "publish",
   ]);
