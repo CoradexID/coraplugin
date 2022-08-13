@@ -14,5 +14,5 @@ require_once(CORAPLUGIN_PATH.'config/'.CORAPLUGIN_THEME.'.php');
 require_once(CORAPLUGIN_PATH.'app/database.php');
 
 $data = get_series('Test bang');
-echo $data;
+var_dump($data);
 die();
