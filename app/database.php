@@ -1,6 +1,6 @@
 <?php
 
-function get_series($title) {
+function CoraPlugin_get_series($title) {
   $post = get_post([
     "post_title" => $title,
     "post_type" => SERIES_TYPE,
@@ -11,7 +11,7 @@ function get_series($title) {
     return 'Error: Post Not Found!';
   }
   
-  $meta = get_post_meta($post->ID);
+  /* $meta = get_post_meta($post->ID);
   
   $chapters = new WP_Query(
   [
@@ -36,7 +36,7 @@ function get_series($title) {
   }
   
   $post->meta = $meta;
-  $post->chapters = $chapters->posts;
+  $post->chapters = $chapters->posts; */
   
   return $post;
 }
