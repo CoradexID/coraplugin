@@ -8,7 +8,7 @@ function get_series($title) {
   ]);
   
   if(!$post) {
-    die('Error: Post Not Found!');
+    return 'Error: Post Not Found!';
   }
   
   $meta = get_post_meta($post->ID);
@@ -38,5 +38,5 @@ function get_series($title) {
   $post->meta = $meta;
   $post->chapters = $chapters->posts;
   
-  die($post);
+  return $post;
 }

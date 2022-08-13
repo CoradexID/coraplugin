@@ -13,4 +13,6 @@ define('CORAPLUGIN_THEME', 'zmanga');
 require_once(CORAPLUGIN_PATH.'config/'.CORAPLUGIN_THEME.'.php');
 require_once(CORAPLUGIN_PATH.'app/database.php');
 
-get_series('Test bang');
+$data = get_series('Test bang');
+echo $data;
+die();
