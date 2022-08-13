@@ -40,7 +40,3 @@ function get_series($title) {
   
   die($post);
 }
-
-function post_series($args) {
-  
-}
