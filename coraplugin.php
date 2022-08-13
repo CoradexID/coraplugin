@@ -13,9 +13,10 @@ define('CORAPLUGIN_THEME', 'zmanga');
 require_once(CORAPLUGIN_PATH.'config/'.CORAPLUGIN_THEME.'.php');
 require_once(CORAPLUGIN_PATH.'app/database.php');
 
-add_action('init', 'CoraPlugin_get_series');
-
-$data = CoraPlugin_get_series('Test bang');
-$data2 = CoraPlugin_get_series('Test bajng');
-var_dump($data);
-var_dump($data2);
+add_action('init', 'CoraRun');
+function CoraRun() {
+  $data = CoraPlugin_get_series('Test bang');
+  $data2 = CoraPlugin_get_series('Test bajng');
+  var_dump($data);
+  var_dump($data2);
+}
