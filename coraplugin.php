@@ -15,4 +15,3 @@ require_once(CORAPLUGIN_PATH.'app/database.php');
 
 $data = get_series('Test bang');
 var_dump($data);
-die();
