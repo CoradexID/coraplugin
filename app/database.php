@@ -1,17 +1,17 @@
 <?php
 
 function CoraPlugin_get_series($title) {
-  $post = get_post([
+  $post = get_posts([
     "title" => $title,
     "post_type" => SERIES_TYPE,
     "post_status" => "publish",
-  ]);
+  ])[0];
   
   if(!$post) {
     return 'Error: Post Not Found!';
   }
   
-  /* $meta = get_post_meta($post->ID);
+  $meta = get_post_meta($post->ID);
   
   $chapters = new WP_Query(
   [
@@ -36,7 +36,7 @@ function CoraPlugin_get_series($title) {
   }
   
   $post->meta = $meta;
-  $post->chapters = $chapters->posts; */
+  $post->chapters = $chapters->posts;
   
   return $post;
 }

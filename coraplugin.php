@@ -14,4 +14,6 @@ require_once(CORAPLUGIN_PATH.'config/'.CORAPLUGIN_THEME.'.php');
 require_once(CORAPLUGIN_PATH.'app/database.php');
 
 $data = CoraPlugin_get_series('Test bang');
+$data2 = CoraPlugin_get_series('Test bajng');
 var_dump($data);
+var_dump($data2);
